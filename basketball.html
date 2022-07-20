@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Counter</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="basketballpage-body">
+    <div class="basketballpage-body__score-container">
+        <div class="basketballpage-body__score-container__content" id="home-container">
+            <p class="home-container__title">HOME</p>
+            <div class="scores" id="home-container__scores">
+                <p class="scores__figure" id="home-container__scores__figures"></p>
+            </div>
+            <div class="points-adder">
+                <button onclick="homePlusOne()" id="home-onepoint-add">+1</button>
+                <button onclick="homePlusTwo()" id="home-twopoint-add">+2</button>
+                <button onclick="homePlusThree()" id="home-threepoint-add">+3</button>
+            </div>
+            <button onclick="homeScoreReset()" class="reset home-score-reset">RESET</button>
+        </div>
+        <div class="basketballpage-body__score-container__content" id="guest-container">
+            <p class="guest-container__title">GUEST</p>
+            <div class="scores" id="guest-container__scores">
+                <p class="scores__figure" id="guest-container__scores__figures"></p>
+            </div>
+            <div class="points-adder">
+                <button onclick="guestPlusOne()" id="guest-onepoint-add">+1</button>
+                <button onclick="guestPlusTwo()" id="guest-twopoint-add">+2</button>
+                <button onclick="guestPlusThree()" id="guest-threepoint-add">+3</button>
+            </div>
+            <button onclick="guestScoreReset()" class="reset guest-score-reset">RESET</button>
+        </div>
+    </div>
+    <script src="./js/basketball.js"></script>
+</body>
+</html>

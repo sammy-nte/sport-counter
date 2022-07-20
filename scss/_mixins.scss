@@ -1,0 +1,28 @@
+//Display Flex
+@mixin displayFlex($justify-content, $direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+    flex-direction: $direction;
+}
+
+//Background
+@mixin backgroundSet($background-size) {
+    background-repeat: no-repeat;
+    background-size: $background-size;
+    background-position: center;
+}
+
+//Font
+@mixin font($font-family, $fallback, $font-size: 1em, $font-weight: 100) {
+    font-family: $font-family, $fallback;
+    font-weight: $font-weight;
+    font-size: $font-size;
+}
+
+//BreakPoint
+@mixin breakPoint($property, $value) {
+    @media screen and ($property: $value) {
+        @content
+    }
+}

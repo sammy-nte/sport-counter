@@ -1,0 +1,123 @@
+.basketballpage-body{
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.312),
+        rgba(0, 0, 0, 0.189)
+    ),
+    url(../img/basketball-images/image2.jpg);
+    @include backgroundSet(cover);
+    @include displayFlex(center);
+    min-height: 100vh;
+
+    #{&}__score-container{
+        width: 50%;
+        height: 400px;
+        background: $board-background;
+        @include displayFlex(center);
+    }
+}
+
+.basketballpage-body__score-container__content{
+    width: 50%;
+    height: inherit;
+    @include displayFlex(space-around, column);
+
+    .home-container__title,
+    .guest-container__title{
+        @include font('Roboto', sans-serif, 2em, 700);
+        color: white;
+    }
+
+    .scores{
+        width: 100px;
+        height: 100px;
+        background: black;
+        display: grid;
+        place-content: center;
+
+        .scores__figure{
+            color: $score-count;
+            @include font('digital-clock-font', sans-serif, 3em);
+        }
+    }
+
+    .points-adder{
+        width: 80%;
+        height: fit-content;
+        @include displayFlex(space-around)
+    }
+
+    .points-adder button{
+        border: 1px solid $pointAdder-border-color;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        padding: 10px;
+        background: transparent;
+        color: $pointAdder-text-color;
+        @include font('digital-clock-font', sans-serif, 1em);
+        cursor: pointer;
+    }
+
+    .reset{
+        background: transparent;
+        border: 1px solid $pointAdder-border-color;
+        @include font('digital-clock-font', sans-serif, 1.3em);
+        color: $pointAdder-text-color;
+        cursor: pointer;
+    }
+}
+
+#home-container{
+    background: transparent;
+    border-right: 1px solid $pointAdder-text-color;
+}
+
+#guest-container{
+    background: transparent;
+}
+
+@include breakPoint(max-width, 880px){
+    .basketballpage-body__score-container{
+        width: 90% !important;
+    }
+}
+
+@include breakPoint(max-width, 450px){
+    .basketballpage-body{    
+        #{&}__score-container{
+            height: fit-content;
+            @include displayFlex(space-around, column);
+        }
+    }
+
+    #home-container{
+        border-bottom: 1px solid $pointAdder-border-color !important;
+        border-right: none;
+    }
+
+    .basketballpage-body__score-container__content{
+        width: 100%;
+        .home-container__title,
+        .guest-container__title{
+            margin: 10px 0;
+        }
+    
+        .scores{
+            margin: 10px 0;
+        }
+    
+        .points-adder{
+            margin: 10px 0;
+            width: 100% !important;
+        }
+    
+        .reset{
+            margin: 10px 0;
+        }
+    }
+}

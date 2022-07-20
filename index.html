@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="homepage-body">
+    <header id="header">
+        <div id="header__logo">Sports</div>
+    </header>
+    <section id="main-content">
+        <div id="main-content__greeting">
+            <h1 id="main-content__greeting__header">Hi!, welcome to Sammy's Sports Center</h1>
+            <p id="main-content__greeting__text">Keep track of your favourite sport scores</p>
+            <button id="main-content__greeting__button" onclick="openExplore()">Get Started</button>
+        </div>
+    </section>
+    <section class="explore-section display">
+        <i class="fa-solid fa-circle-xmark" onclick="closeExplore()"></i>
+        <div class="explore-section__content-container" id="football-section">
+            <div class="explore-section__content-container__image" id="football-section__image"></div>
+            <p class="explore-section__content-container__text" id="football-section__text">FOOTBALL</p>
+        </div>
+        <div class="explore-section__content-container" id="basketball-section">
+            <div class="explore-section__content-container__image basket" id="basketball-section__image"></div>
+            <p class="explore-section__content-container__text" id="basketball-section__text">BASKETBALL</p>
+            <a href="./basketball.html">
+                <button class="explore-section__content-container__button" id="basketball-section__button">LET'S GO!</button>
+            </a>
+        </div>
+        <div class="explore-section__content-container" id="tennis-section">
+            <div class="explore-section__content-container__image basket" id="tennis-section__image"></div>
+            <p class="explore-section__content-container__text" id="tennis-section__text">TENNIS</p>
+        </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d2a1321d7b.js" crossorigin="anonymous"></script>
+</body>
+</html>

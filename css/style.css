@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("../font/e1234-font/E1234-p7pER.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.basketballpage-body {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.312), rgba(0, 0, 0, 0.189)), url(../img/basketball-images/image2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 100vh;
+}
+.basketballpage-body .basketballpage-body__score-container {
+  width: 50%;
+  height: 400px;
+  background: #1b244a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.basketballpage-body__score-container__content {
+  width: 50%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.basketballpage-body__score-container__content .home-container__title,
+.basketballpage-body__score-container__content .guest-container__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  color: white;
+}
+.basketballpage-body__score-container__content .scores {
+  width: 100px;
+  height: 100px;
+  background: black;
+  display: grid;
+  place-content: center;
+}
+.basketballpage-body__score-container__content .scores .scores__figure {
+  color: #F94F6D;
+  font-family: "digital-clock-font", sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+}
+.basketballpage-body__score-container__content .points-adder {
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.basketballpage-body__score-container__content .points-adder button {
+  border: 1px solid #9AABD8;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 10px;
+  background: transparent;
+  color: #9AABD8;
+  font-family: "digital-clock-font", sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  cursor: pointer;
+}
+.basketballpage-body__score-container__content .reset {
+  background: transparent;
+  border: 1px solid #9AABD8;
+  font-family: "digital-clock-font", sans-serif;
+  font-weight: 100;
+  font-size: 1.3em;
+  color: #9AABD8;
+  cursor: pointer;
+}
+
+#home-container {
+  background: transparent;
+  border-right: 1px solid #9AABD8;
+}
+
+#guest-container {
+  background: transparent;
+}
+
+@media screen and (max-width: 880px) {
+  .basketballpage-body__score-container {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .basketballpage-body .basketballpage-body__score-container {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  #home-container {
+    border-bottom: 1px solid #9AABD8 !important;
+    border-right: none;
+  }
+  .basketballpage-body__score-container__content {
+    width: 100%;
+  }
+  .basketballpage-body__score-container__content .home-container__title,
+.basketballpage-body__score-container__content .guest-container__title {
+    margin: 10px 0;
+  }
+  .basketballpage-body__score-container__content .scores {
+    margin: 10px 0;
+  }
+  .basketballpage-body__score-container__content .points-adder {
+    margin: 10px 0;
+    width: 100% !important;
+  }
+  .basketballpage-body__score-container__content .reset {
+    margin: 10px 0;
+  }
+}
+#homepage-body {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.312), rgba(0, 0, 0, 0.189)), url(../img/homepage-background/homepage_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#header #header__logo {
+  height: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2em;
+  color: white;
+}
+
+#main-content {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  margin: 10px 0;
+}
+#main-content #main-content__greeting {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1em;
+  color: white;
+}
+#main-content #main-content__greeting #main-content__greeting__header {
+  font-size: 2em;
+}
+#main-content #main-content__greeting #main-content__greeting__text {
+  padding: 3px;
+}
+#main-content #main-content__greeting #main-content__greeting__button {
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #2a597a;
+  cursor: pointer;
+  transition: all 350ms ease;
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  -ms-transition: all 350ms ease;
+  -o-transition: all 350ms ease;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+#main-content #main-content__greeting #main-content__greeting__button:hover {
+  background-color: #1f446b;
+}
+
+.explore-section {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #2a597a;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  display: none;
+  margin-top: auto;
+  position: relative;
+}
+.explore-section .fa-circle-xmark {
+  font-size: 3em;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.explore-section .explore-section__content-container {
+  height: 330px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.4);
+  animation: moveFromLeft 1.5s ease;
+  -webkit-animation: moveFromLeft 1.5s ease;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 20px 0;
+}
+.explore-section .explore-section__content-container .explore-section__content-container__image {
+  width: inherit;
+  height: 200px;
+  background: rgb(179, 179, 184);
+}
+.explore-section .explore-section__content-container .explore-section__content-container__button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+.explore-section .explore-section__content-container .explore-section__content-container__button::after {
+  content: "YES!";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+}
+.explore-section .explore-section__content-container .explore-section__content-container__button:hover::after {
+  background: #407e96;
+  width: 100%;
+  opacity: 1;
+}
+
+#football-section {
+  position: relative;
+}
+#football-section::after {
+  content: "COMING SOON";
+  width: 100%;
+  height: 100%;
+  background: rgba(207, 207, 207, 0.825);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: not-allowed;
+}
+#football-section #football-section__image {
+  background: url("../img/football-images/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#basketball-section #basketball-section__image {
+  background: url("../img/basketball-images/image1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#tennis-section {
+  position: relative;
+}
+#tennis-section::after {
+  content: "COMING SOON";
+  width: 100%;
+  height: 100%;
+  background: rgba(207, 207, 207, 0.825);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: not-allowed;
+}
+#tennis-section #tennis-section__image {
+  background: url("../img/tennis-images/tennis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@-webkit-keyframes moveFromBottom {
+  from {
+    transform: translateY(3000px);
+    -webkit-transform: translateY(3000px);
+    -moz-transform: translateY(3000px);
+    -ms-transform: translateY(3000px);
+    -o-transform: translateY(3000px);
+  }
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+@keyframes moveFromBottom {
+  from {
+    transform: translateY(3000px);
+    -webkit-transform: translateY(3000px);
+    -moz-transform: translateY(3000px);
+    -ms-transform: translateY(3000px);
+    -o-transform: translateY(3000px);
+  }
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+@-webkit-keyframes moveFromLeft {
+  from {
+    transform: translateX(-1000px);
+    -webkit-transform: translateX(-1000px);
+    -moz-transform: translateX(-1000px);
+    -ms-transform: translateX(-1000px);
+    -o-transform: translateX(-1000px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    opacity: 1;
+  }
+}
+@keyframes moveFromLeft {
+  from {
+    transform: translateX(-1000px);
+    -webkit-transform: translateX(-1000px);
+    -moz-transform: translateX(-1000px);
+    -ms-transform: translateX(-1000px);
+    -o-transform: translateX(-1000px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes moveToRight {
+  from {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  to {
+    transform: translateX(3000px);
+    -webkit-transform: translateX(3000px);
+    -moz-transform: translateX(3000px);
+    -ms-transform: translateX(3000px);
+    -o-transform: translateX(3000px);
+    opacity: 0;
+  }
+}
+@keyframes moveToRight {
+  from {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+  to {
+    transform: translateX(3000px);
+    -webkit-transform: translateX(3000px);
+    -moz-transform: translateX(3000px);
+    -ms-transform: translateX(3000px);
+    -o-transform: translateX(3000px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 990px) {
+  .explore-section .explore-section__content-container {
+    width: 30%;
+    height: 300px;
+  }
+  .explore-section .explore-section__content-container__image {
+    height: 100px;
+    width: 100% !important;
+    background: rgb(179, 179, 184);
+  }
+  .explore-section .fa-circle-xmark {
+    font-size: 2em;
+    top: 3px;
+    right: 1px;
+  }
+  #football-section #football-section__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #basketball-section #basketball-section__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  #main-content #main-content__greeting #main-content__greeting__header {
+    font-size: 1em;
+  }
+  #main-content #main-content__greeting #main-content__greeting__text {
+    font-size: 1em;
+  }
+  #main-content #main-content__greeting #main-content__greeting__button {
+    padding: 3px;
+    font-size: 1em;
+  }
+  .explore-section .fa-circle-xmark {
+    font-size: 2em;
+    top: 3px;
+    right: 1px;
+  }
+  .explore-section .explore-section__content-container {
+    width: 30%;
+    height: 230px;
+    font-size: 0.8em;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .explore-section .explore-section__content-container .explore-section__content-container__image {
+    height: 90px;
+    width: 100%;
+    background: rgb(179, 179, 184);
+  }
+  .explore-section .explore-section__content-container .explore-section__content-container__button {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+  #football-section::after {
+    font-size: 0.8em;
+  }
+  #football-section #football-section__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #basketball-section #basketball-section__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #tennis-section::after {
+    font-size: 0.8em;
+  }
+  #tennis-section #tennis-section__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}/*# sourceMappingURL=style.css.map */

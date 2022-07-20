@@ -1,0 +1,387 @@
+//Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+//Digital Clock Font
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('../font/e1234-font/E1234-p7pER.ttf');
+}
+
+@import "resets";
+@import "variables";
+@import "mixins";
+@import "functions";
+@import "basketball";
+
+#homepage-body {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.312),
+        rgba(0, 0, 0, 0.189)
+      ),
+    url(../img/homepage-background/homepage_bg.jpg);
+    @include backgroundSet(cover);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    @include displayFlex(center);
+
+    #{&}__logo {
+        height: inherit;
+        width: fit-content;
+        @include font("Roboto", sans-serif, 2em);
+        color: white;
+    }
+}
+
+#main-content {
+    width: 100%;
+    height: fit-content;
+    @include displayFlex(center);
+    text-align: center;
+    margin: 10px 0;
+  
+    #{&}__greeting {
+        width: fit-content;
+        height: fit-content;
+        background-color: $homepage-primary-color;
+        padding: 10px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @include font('Roboto', sans-serif);
+        color: white;
+    
+        #main-content__greeting__header {
+            font-size: 2em;
+        }
+    
+        #main-content__greeting__text {
+            padding: 3px;
+        }
+    
+        #main-content__greeting__button {
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            background: $primary-color-lighter;
+            cursor: pointer;
+            transition: all 350ms ease;
+            -webkit-transition: all 350ms ease;
+            -moz-transition: all 350ms ease;
+            -ms-transition: all 350ms ease;
+            -o-transition: all 350ms ease;
+            color: white;
+            @include font("Roboto", sans-serif, 1.2em);
+            
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+.explore-section {
+    width: 100%;
+    height: fit-content;
+    background: $primary-color-lighter;
+    @include displayFlex(space-around);
+    display: none;
+    margin-top: auto;
+    position: relative;
+
+    & .fa-circle-xmark {
+        font-size: 3em;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #{&}__content-container {
+        height: 330px;
+        width: 300px;
+        background: $homepage-primary-color;
+        animation: moveFromLeft 1.5s ease;
+        -webkit-animation: moveFromLeft 1.5s ease;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @include displayFlex(space-between, column);
+        @include font("Roboto", sans-serif, 1em, 400);
+        margin: 20px 0;
+
+        .explore-section__content-container__image {
+            width: inherit;
+            height: 200px;
+            background: rgb(179, 179, 184);
+        }
+
+        .explore-section__content-container__button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+            position: relative;
+            background: white;
+            @include font("Roboto", sans-serif, 1em, 400);
+        
+            &::after {
+                content: "YES!";
+                width: 0%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transition: all 1s ease;
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                opacity: 0;
+                @include displayFlex(center);
+                color: white;
+            }
+          
+            &:hover {
+                &::after {
+                    background: $secondary-color-lighter;
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+      }
+    }
+}
+
+#football-section {
+    position: relative;
+
+    &::after {
+        content: "COMING SOON";
+        width: 100%;
+        height: 100%;
+        background: rgba(207, 207, 207, 0.825);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include displayFlex(center);
+        cursor: not-allowed;
+    }
+
+    #{&}__image {
+        background: url("../img/football-images/image1.jpg");
+        @include backgroundSet(contain);
+    }
+}
+
+#basketball-section {
+    #{&}__image {
+        background: url("../img/basketball-images/image1.jpg");
+        @include backgroundSet(contain);
+    }
+}
+
+#tennis-section {
+    position: relative;
+
+    &::after {
+        content: "COMING SOON";
+        width: 100%;
+        height: 100%;
+        background: rgba(207, 207, 207, 0.825);
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include displayFlex(center);
+        cursor: not-allowed;
+    }
+
+    #{&}__image {
+        background: url("../img/tennis-images/tennis.jpg");
+        @include backgroundSet(cover);
+    }
+}
+
+@keyframes moveFromBottom {
+    from {
+        transform: translateY(3000px);
+        -webkit-transform: translateY(3000px);
+        -moz-transform: translateY(3000px);
+        -ms-transform: translateY(3000px);
+        -o-transform: translateY(3000px);
+    }
+
+    to {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+}
+
+@keyframes moveFromLeft {
+    from {
+        transform: translateX(-1000px);
+        -webkit-transform: translateX(-1000px);
+        -moz-transform: translateX(-1000px);
+        -ms-transform: translateX(-1000px);
+        -o-transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes moveToRight {
+    from {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+    }
+
+    to {
+        transform: translateX(3000px);
+        -webkit-transform: translateX(3000px);
+        -moz-transform: translateX(3000px);
+        -ms-transform: translateX(3000px);
+        -o-transform: translateX(3000px);
+        opacity: 0;
+    }
+}
+
+@include breakPoint(max-width, 990px){
+    .explore-section{
+        #{&}__content-container {
+            width: 30%;  
+            height: 300px;          
+        }
+
+        .explore-section__content-container__image {
+            height: 100px;
+            width: 100% !important;
+            background: rgb(179, 179, 184);
+        }
+
+        & .fa-circle-xmark {
+            font-size: 2em;
+            top: 3px;
+            right: 1px;
+        }
+    }
+
+    #football-section {
+        #{&}__image {
+            @include backgroundSet(cover);
+        }
+    }
+    
+    #basketball-section {
+        #{&}__image {
+            @include backgroundSet(cover);
+        }
+    }
+}
+
+@include breakPoint(max-width, 550px){
+    #main-content{
+        #{&}__greeting{
+            #main-content__greeting__header{
+                font-size: 1em;
+            }
+
+            #main-content__greeting__text{
+                font-size: 1em;
+            }
+
+            #main-content__greeting__button{
+                padding: 3px;
+                font-size: 1em;
+            }
+        }
+    }
+
+    .explore-section{
+        & .fa-circle-xmark {
+            font-size: 2em;
+            top: 3px;
+            right: 1px;
+        }
+
+        #{&}__content-container {
+            width: 30%; 
+            height: 230px; 
+            font-size: .8em;   
+            word-wrap: break-word;
+            word-break: break-all;
+            
+            .explore-section__content-container__image {
+                height: 90px;
+                width: 100%;
+                background: rgb(179, 179, 184);
+            }
+
+            .explore-section__content-container__button {
+                padding: 8px;
+                font-size: .8em
+            }
+        }
+    }
+
+    #football-section {
+        &::after {
+            font-size: .8em;
+        }
+
+        #{&}__image {
+            @include backgroundSet(cover);
+        }
+    }
+    
+    #basketball-section {
+        #{&}__image {
+            @include backgroundSet(cover);
+        }
+    }
+
+    #tennis-section {
+        &::after {
+            font-size: .8em;
+        }
+    
+        #{&}__image {
+            @include backgroundSet(cover);
+        }
+    }
+}
